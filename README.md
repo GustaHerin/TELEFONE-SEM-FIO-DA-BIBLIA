@@ -164,10 +164,8 @@ A API do projeto foi projetada para ser consumida diretamente pelo site e por pl
 Para publicar este projeto em um novo repositório no seu GitHub, siga os passos abaixo no terminal:
 
 ```bash
-# 1. Crie um novo repositório no seu GitHub (ex: telefone-sem-fio-da-biblia)
-
-# 2. Conecte este repositório local ao seu GitHub:
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+# 1. Repositório oficial no GitHub:
+git remote add origin https://github.com/GustaHerin/TELEFONE-SEM-FIO-DA-BIBLIA.git
 
 # 3. Defina o branch principal como main:
 git branch -M main
