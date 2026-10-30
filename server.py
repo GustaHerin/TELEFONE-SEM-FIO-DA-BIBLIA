@@ -349,6 +349,7 @@ def run():
     init_comments_file()
     init_downloads_file()
     server_address = ("", PORT)
+    HTTPServer.allow_reuse_address = True
     httpd = HTTPServer(server_address, SafeBookHandler)
     print(f"[OK] Servidor Seguro Ativo em http://0.0.0.0:{PORT} (Sem Banco de Dados | JSON Sanitizado)")
     try:
