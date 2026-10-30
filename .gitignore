@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+.venv/
+
+# Ambientes e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Arquivos de Trava do LibreOffice
+.~lock.*
+*.lock
+
+# Logs
+*.log

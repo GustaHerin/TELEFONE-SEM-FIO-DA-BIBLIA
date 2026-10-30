@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3D1"/>
+      <stop offset="35%" stop-color="#E5B968"/>
+      <stop offset="70%" stop-color="#C59B4E"/>
+      <stop offset="100%" stop-color="#8E6924"/>
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111A2E"/>
+      <stop offset="100%" stop-color="#06090F"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#D4AF37" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="goldShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="200" r="185" fill="url(#sunGlow)"/>
+
+  <!-- Outer Ring -->
+  <circle cx="200" cy="200" r="180" fill="url(#darkBg)" stroke="url(#goldGrad)" stroke-width="3" filter="url(#goldShadow)"/>
+  <circle cx="200" cy="200" r="168" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6"/>
+
+  <!-- Subtle Radiating Sunburst Rays -->
+  <g stroke="url(#goldGrad)" stroke-width="0.8" stroke-opacity="0.25">
+    <line x1="200" y1="36" x2="200" y2="70"/>
+    <line x1="200" y1="330" x2="200" y2="364"/>
+    <line x1="36" y1="200" x2="70" y2="200"/>
+    <line x1="330" y1="200" x2="364" y2="200"/>
+    <line x1="84" y1="84" x2="108" y2="108"/>
+    <line x1="292" y1="292" x2="316" y2="316"/>
+    <line x1="84" y1="316" x2="108" y2="292"/>
+    <line x1="292" y1="108" x2="316" y2="84"/>
+  </g>
+
+  <!-- Central Open Codex / Ancient Bible -->
+  <g transform="translate(100, 115) scale(0.5)">
+    <!-- Book Pages Shadow -->
+    <path d="M 200,80 Q 280,60 370,80 L 370,270 Q 280,250 200,270 Q 120,250 30,270 L 30,80 Q 120,60 200,80 Z"
+          fill="#0B111D" stroke="url(#goldGrad)" stroke-width="3"/>
+    <!-- Left Page Layers -->
+    <path d="M 200,90 Q 125,72 45,90 L 45,260 Q 125,242 200,260 Z"
+          fill="#162238" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <!-- Right Page Layers -->
+    <path d="M 200,90 Q 275,72 355,90 L 355,260 Q 275,242 200,260 Z"
+          fill="#162238" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    
+    <!-- Ancient Script Lines on Left Page -->
+    <g stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" stroke-opacity="0.75">
+      <line x1="70" y1="125" x2="175" y2="125"/>
+      <line x1="70" y1="150" x2="165" y2="150"/>
+      <line x1="70" y1="175" x2="175" y2="175"/>
+      <line x1="70" y1="200" x2="150" y2="200"/>
+      <line x1="70" y1="225" x2="170" y2="225"/>
+    </g>
+
+    <!-- Ancient Script Lines on Right Page -->
+    <g stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" stroke-opacity="0.75">
+      <line x1="225" y1="125" x2="330" y2="125"/>
+      <line x1="235" y1="150" x2="330" y2="150"/>
+      <line x1="225" y1="175" x2="330" y2="175"/>
+      <line x1="235" y1="200" x2="315" y2="200"/>
+      <line x1="225" y1="225" x2="325" y2="225"/>
+    </g>
+
+    <!-- Golden Spine and Bookmark Ribbon -->
+    <path d="M 200,80 L 200,285 Q 212,305 220,335 Q 205,320 190,335 Q 198,305 200,285"
+          fill="url(#goldGrad)" stroke="#B38032" stroke-width="1"/>
+  </g>
+
+  <!-- Golden Magnifying Glass over Scripture -->
+  <g transform="translate(200, 215) rotate(-35) scale(0.65)">
+    <circle cx="0" cy="0" r="48" fill="none" stroke="url(#goldGrad)" stroke-width="7" filter="url(#goldShadow)"/>
+    <circle cx="0" cy="0" r="42" fill="rgba(212, 175, 55, 0.12)" stroke="#FFF0C2" stroke-width="1"/>
+    <!-- Handle -->
+    <rect x="-6" y="48" width="12" height="60" rx="4" fill="url(#goldGrad)" stroke="#8E6924" stroke-width="1.5"/>
+    <circle cx="0" cy="112" r="7" fill="url(#goldGrad)"/>
+    <!-- Glass Lens Highlight -->
+    <path d="M -28,-28 A 38,38 0 0,1 28,-28" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.8"/>
+  </g>
+
+  <!-- Curved Bottom Banner Text -->
+  <path id="textArc" d="M 75,250 A 135,135 0 0,0 325,250" fill="none"/>
+  <text font-family="'Cinzel', serif" font-size="14" font-weight="700" letter-spacing="3" fill="url(#goldGrad)">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">
+      EXEGESE · HISTÓRIA · FILOLOGIA
+    </textPath>
+  </text>
+
+  <!-- Top Center Diamond Star -->
+  <polygon points="200,50 206,62 218,62 208,70 212,82 200,74 188,82 192,70 182,62 194,62" fill="url(#goldGrad)"/>
+</svg>
