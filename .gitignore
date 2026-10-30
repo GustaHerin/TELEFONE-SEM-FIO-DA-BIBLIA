@@ -26,3 +26,14 @@ ehthumbs.db
 
 # Logs
 *.log
+
+# Documentacao e rascunhos locais (nao enviar ao GitHub)
+documentacao/
+*.odt
+gerar_pdf.py
+
+# Imagens brutas / de edicao
+capa_base.jpg
+capa_frente.png
+contracapa.png
+tundralab_logo_raw.png

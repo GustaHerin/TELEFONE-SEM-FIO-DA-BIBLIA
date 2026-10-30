@@ -35,9 +35,6 @@ O repositório contém a aplicação web completa do livro, projetada para carre
    * Proteções de segurança ativas (cabeçalhos de segurança, sanitização HTML contra XSS, proteção anti-spam).
    * **Suporte Completo a CORS (`Access-Control-Allow-Origin: *`)**: permite que outros sites e aplicações externas consumam metadados e imagens do livro diretamente.
 
-3. **Gerador Automatizado de PDF (`gerar_pdf.py`):**
-   * Script Python que processa o manuscrito completo em Markdown e gera o arquivo OpenDocument (`.odt`) e PDF formatado.
-
 ---
 
 ## 📁 Estrutura do Repositório
@@ -45,28 +42,13 @@ O repositório contém a aplicação web completa do livro, projetada para carre
 ```text
 ├── index.html                     # Landing page principal e leitor interativo
 ├── server.py                      # Servidor HTTP nativo e API REST
-├── gerar_pdf.py                   # Script de compilação do manuscrito para ODT/PDF
 ├── Telefone_Sem_Fio_da_Biblia.pdf # Livro completo diagramado em PDF
-├── Telefone_Sem_Fio_da_Biblia.odt # Documento fonte editável (LibreOffice)
 ├── downloads.json                 # Registro de contagem de downloads
 ├── comentarios.json               # Avaliações e resenhas dos leitores
 ├── capa_frente_web.jpg            # Imagem otimizada da capa frontal (Web)
 ├── contracapa_web.jpg             # Imagem otimizada da contracapa (Web)
-├── capa_frente.png                # Imagem original de alta resolução da capa
-├── contracapa.png                 # Imagem original de alta resolução da contracapa
-├── capa_base.jpg                  # Arte conceitual base da capa
 ├── site_logo.png / site_logo.svg  # Identidade visual e logotipo do projeto
 ├── tundralab_logo.png             # Logo da TundraLab
-├── documentacao/                  # Dossiê editorial e material de pesquisa
-│   ├── MANUSCRITO_COMPLETO.md     # Texto integral do livro em Markdown
-│   ├── BÍBLIA_DO_LIVRO.md         # Diretrizes teológicas e metodológicas
-│   ├── PLANEJAMENTO_DOS_CAPÍTULOS.md # Estrutura e roteiro capitular
-│   ├── CRONOLOGIA.md              # Linha temporal dos eventos e traduções
-│   ├── PERSONAGENS.md             # Figuras históricas e acadêmicas citadas
-│   ├── AUDITORIA_FINAL.md         # Registro de revisão textual e checagem
-│   ├── QUESTÕES_PENDENTES.md      # Apontamentos e notas de pesquisa
-│   ├── REGISTRO_DE_CONTINUIDADE.md# Histórico de alterações e consistência
-│   └── RESUMO_DA_SESSÃO.md        # Síntese das sessões de redação
 ├── .gitignore                     # Arquivos ignorados pelo Git
 └── README.md                      # Documentação do projeto
 ```
@@ -148,31 +130,6 @@ A API do projeto foi projetada para ser consumida diretamente pelo site e por pl
 ### 4. Avaliações e Comentários
 * **Listar comentários:** `GET /api/comentarios`
 * **Enviar avaliação:** `POST /api/comentarios`
-  * Body (JSON):
-  ```json
-  {
-    "nome": "Seu Nome",
-    "estrelas": 5,
-    "comentario": "Excelente análise textual."
-  }
-  ```
-
----
-
-## 📤 Como Fazer Upload para o GitHub
-
-Para publicar este projeto em um novo repositório no seu GitHub, siga os passos abaixo no terminal:
-
-```bash
-# 1. Repositório oficial no GitHub:
-git remote add origin https://github.com/GustaHerin/TELEFONE-SEM-FIO-DA-BIBLIA.git
-
-# 3. Defina o branch principal como main:
-git branch -M main
-
-# 4. Envie os arquivos:
-git push -u origin main
-```
 
 ---
 
